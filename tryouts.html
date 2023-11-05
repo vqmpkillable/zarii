@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zarii</title>
+    <link rel="icon" type="image/jpg" href="zarii.jpg">
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        #header {
+            color: white;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 36px;
+            margin-top: 20%;
+        }
+
+        #subtitle {
+            color: white;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        #not-open {
+            color: red;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+
+    if (window.location.pathname.endsWith(".html")) {
+      var cleanURL = window.location.pathname.slice(0, -5);
+      history.replaceState({}, null, cleanURL);
+    }
+  });
+</script>
+    
+    </div>
+    <div id="subtitle">
+        Tryouts are <span id="not-open">NOT open.</span>
+    </div>
+</body>
+</html>
